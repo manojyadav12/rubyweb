@@ -1,0 +1,42 @@
+<%= form_with(model: employee) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+        <% employee.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+  <!--  <%= form.label :empId %> . -->
+    <%= form.text_field :empId,class:"form-control",placeholder:"Employee ID" %>
+  </div>
+<br/>
+  <div class="field form-group">
+    
+    <%= form.text_field :name,class:"form-control",placeholder:"Full Name" %>
+  </div>
+<br/>
+  <div class="field form-group">
+   
+    <%= form.text_field :age,class:"form-control",placeholder:"Age" %>
+  </div>
+<br/>
+  <div class="field form-group">
+   
+    <%= form.text_field :salary,class:"form-control",placeholder:"Salary" %>
+  </div>
+<br/>
+  <div class="field form-group">
+   
+    <%= form.text_field :location,class:"form-control" ,placeholder:"Location"%>
+  </div>
+ <br/>
+  <div class="actions btn btn-secondary">
+    <%= form.submit %>
+  </div>
+<% end %>

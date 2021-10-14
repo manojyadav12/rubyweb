@@ -1,0 +1,28 @@
+
+<p>
+  <strong>Empid:</strong>
+  <%= @employee.empId %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @employee.age %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @employee.salary %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @employee.location %>
+</p>
+<!--<%= link_to 'Edit', edit_employee_path %> | can also -->
+<%= link_to 'Edit', edit_employee_path(@employee),class:"btn btn-secondary" %>
+<%= link_to 'Back', employees_path,class:"btn btn-dark" %>
